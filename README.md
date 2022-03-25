@@ -1,9 +1,8 @@
 ## Changelog
 
-<!-- Version start @@ {"version": "v1.0.0", "release": "Auto Tag", "shouldCreateRelease": "true" } -->
+<!-- Version start @@ {"version": "v1.4", "release": "Stable", "shouldCreateRelease": "true"} -->
 
-### v1.0.0 2022-03-24
+- ### v0.1.4
 
-* Ahora genero tags automáticamente.
-
-<!-- Version end -->
+  - Fix README.
+  <!-- Version end -->
