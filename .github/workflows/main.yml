@@ -26,4 +26,4 @@ jobs:
       - name: Read the Releases File
         id: changelog
         uses: Jeconias/changelog@v1.3
-      - run: echo "${{steps.changelog.outputs.changelog}} | ${{steps.changelog.outputs.version}} | ${{steps.changelog.outputs.version}}"
+      - run: echo "${{steps.changelog.outputs.changelog}}"
