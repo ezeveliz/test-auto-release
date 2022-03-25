@@ -70,7 +70,7 @@ jobs:
           target_branch: main
           files: "./changelog.md"
           remote_repository: https://github.com/ezeveliz/test-auto-docs
-          access_token: ${{ github.PUSH_TOKEN }}
+          access_token: ${{ secrets.PUSH_TOKEN }}
           force: true
           empty: true
           tags: true
