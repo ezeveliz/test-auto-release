@@ -74,3 +74,29 @@ jobs:
           force: true
           empty: true
           tags: true
+
+  Publish_External_Changelog:
+
+    needs: Changelog
+    if: needs.Changelog.outputs.shouldCreateRelease == 'true'
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Get Code
+        uses: actions/checkout@v2.3.4
+
+      - name: Push Changes
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          email: ${{ github.actor }}@users.noreply.github.com
+          name: ${{ github.actor }}
+          commit_message: "Update changelog"
+          target_branch: main
+          files: "./changelog.md"
+          remote_repository: https://github.com/arbilsoft/docs
+          access_token: ${{ secrets.EXTERNAL_PUSH_TOKEN }}
+          force: true
+          empty: true
+          tags: true
