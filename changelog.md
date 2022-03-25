@@ -1,11 +1,15 @@
 ## Changelog
 
-<!-- Version start @@ {"version": "v1.8", "release": "External Push 2", "shouldCreateRelease": "true"} -->
+<!-- Version start @@ {"version": "v1.9", "release": "External Push 3", "shouldCreateRelease": "true"} -->
+
+- ### v0.1.9
+
+  - Testing external push 3.
+  <!-- Version end -->
 
 - ### v0.1.8
 
   - Testing external push 2.
-  <!-- Version end -->
 
 - ### v0.1.7
 
