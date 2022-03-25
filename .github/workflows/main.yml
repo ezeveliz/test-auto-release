@@ -26,6 +26,8 @@ jobs:
       - name: Read the Releases File
         id: changelog
         uses: Jeconias/changelog@v1.3
+        with:
+          path: "./RELEASES.md"  
       - run: echo "${{steps.changelog.outputs.changelog}}"
       
   Release:
