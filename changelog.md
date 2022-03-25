@@ -1,12 +1,16 @@
 # Últimos Cambios
 
-<!-- Version start @@ {"version": "v1.3", "release": "External Update", "shouldCreateRelease": "true"} -->
+<!-- Version start @@ {"version": "v1.3.1", "release": "External Update", "shouldCreateRelease": "true"} -->
+
+## v1.3.1 2022/03/25
+
+* Final test.
+
+  <!-- Version end -->
 
 ## v1.3 2022/03/25
 
 * External Changelog Update.
-
-  <!-- Version end -->
 
 - ## v0.2 2022/03/25
 
