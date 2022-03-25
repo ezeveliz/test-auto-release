@@ -22,5 +22,4 @@ jobs:
         uses: Jeconias/changelog@v1.3
         with:
           path: "./README.md"  
-      - name: Output results
       - run: echo "${{steps.changelog.outputs.changelog}} | ${{steps.changelog.outputs.version}}"
