@@ -48,3 +48,29 @@ jobs:
           body: ${{needs.Changelog.outputs.changelog}}
           draft: false
           prerelease: false
+
+  Publish_Changelog:
+
+    needs: Changelog
+    if: needs.Changelog.outputs.shouldCreateRelease == 'true'
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Get Code
+        uses: actions/checkout@v2.3.4
+
+      - name: Push Changes
+        uses: GuillaumeFalourd/git-commit-push@v1.3
+        with:
+          email: ${{ github.actor }}@users.noreply.github.com
+          name: ${{ github.actor }}
+          commit_message: "Update changelog"
+          target_branch: main
+          files: "./changelog.md"
+          remote_repository: https://github.com/ezeveliz/test-auto-docs
+          access_token: ${{ github.PUSH_TOKEN }}
+          force: true
+          empty: true
+          tags: true
